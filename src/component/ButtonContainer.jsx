@@ -4,14 +4,16 @@ export const ButtonContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin: 10px 40px;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const TransBtn = styled.button`
   margin: 10px;
   flex: 1;
   min-width: 360px;
-  height: 300px;
-  background: var(--DARKBLUE);
+  height: 360px;
+  background-color: var(--DARKBLUE);
   /* border: 2px solid white; // 기본색상 */
   color: white;
 
@@ -24,7 +26,7 @@ export const TransBtn = styled.button`
   border: 1px solid darkgray;
 
   & + & {
-    background: var(--LIGHTBLUE);
+    background-color: var(--LIGHTBLUE);
     color: black;
   }
 
@@ -38,11 +40,21 @@ export const TransBtn = styled.button`
     `};
 
   &:hover {
-    background-color: #555;
-    color: #eee;
+    background-color: #3b7398;
+    color: #ffffff;
   }
+
+  & + &:hover {
+    background-color: #77b2cf;
+    color: black;
+  }
+
   &:active {
-    background-color: #0056b3; // 활성화 상태에서의 색상
-    border-color: #aaa;
+    background-color: var(--DARKBLUE); // 활성화 상태에서의 색상
+    border-color: #eee;
+  }
+  & + &:active {
+    background: var(--LIGHTBLUE);
+    color: black;
   }
 `;
