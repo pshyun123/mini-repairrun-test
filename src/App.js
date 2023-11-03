@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Test />
+      <Test />1
     </>
   );
 }
