@@ -1,10 +1,19 @@
 import "./App.css";
-import Test from "./pages/Test";
+import NewOrder from "./pages/NewOrder";
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
+  :root {
+    --DARKBLUE : #4682A9;
+    --MIDBLUE : #749BC2;
+    --LIGHTBLUE : #91C8E4;
+    --IVORY : #F6F4EB;
+    --GREY : #E0E4E9;
+  }
+
   * {
     box-sizing: border-box;
   }
@@ -23,13 +32,39 @@ const GlobalStyle = createGlobalStyle`
   time, mark, audio, video{
     font-family: 'Noto Sans KR', sans-serif;
   }
+  h2 {
+    font-size: 2.4em;
+  }
+  h3 {
+    font-size: 1.6em;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+   
+  }
+  @media only screen and (max-width:768px) {
+    body {
+      font-size: 14px;
+    }
+    h2 {
+      font-size: 2em;
+    }
+    .container {
+      width: 90vw;
+    }
+  }
 `;
-
 function App() {
   return (
     <>
+      {/* path 경로, element는 컴포넌트를 부름 */}
       <GlobalStyle />
-      <Test />1
+      <Router>
+        <Routes>
+          <Route path="/" element={<NewOrder />} />
+        </Routes>
+      </Router>
     </>
   );
 }
