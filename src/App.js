@@ -1,9 +1,13 @@
 import "./App.css";
-import NewOrder from "./pages/NewOrder";
+
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
+// import NewOrder from "./pages/NewOrder";
+// import BasicRepair from "./pages/BasicRepair";
+import FastRepair from "./pages/FastRepair";
+// import GeneralStep from "./pages/GeneralStep";
+import images from "./images/수도권지도.jpg";
 const GlobalStyle = createGlobalStyle`
   ${reset}
   :root {
@@ -62,7 +66,10 @@ function App() {
       <GlobalStyle />
       <Router>
         <Routes>
-          <Route path="/" element={<NewOrder />} />
+          {/* <Route path="/" element={<NewOrder />} /> */}
+          {/* <Route path="/" element={<BasicRepair />} /> */}
+          <Route path="/" element={<FastRepair />} />
+          {/* <Route path="/" element={<GeneralStep />} /> */}
         </Routes>
       </Router>
     </>

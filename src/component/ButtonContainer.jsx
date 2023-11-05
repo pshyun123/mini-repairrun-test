@@ -4,17 +4,17 @@ export const ButtonContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin: 10px 40px;
+  padding-top: 250px;
   align-items: center;
   justify-content: center;
 `;
 
 export const TransBtn = styled.button`
   margin: 10px;
-  flex: 1;
+  /* flex: 1; */
   min-width: 360px;
   height: 360px;
   background-color: var(--DARKBLUE);
-  /* border: 2px solid white; // 기본색상 */
   color: white;
 
   padding: 0.5rem 1rem;
@@ -41,7 +41,7 @@ export const TransBtn = styled.button`
 
   &:hover {
     background-color: #3b7398;
-    color: #ffffff;
+    color: white;
   }
 
   & + &:hover {
